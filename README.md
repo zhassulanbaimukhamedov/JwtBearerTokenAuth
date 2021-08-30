@@ -164,34 +164,34 @@
     }
   
 8. И в конце добавим папку wwwroot, и новый файл index.html. (And at the end add wwwroot folder, and a new index.html file)
-  <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-  <!DOCTYPE html>
-  <html>
-  <head>
-      <meta charset="utf-8" />
-      <title>JWT в ASP.NET Core Web API</title>
-  </head>
-  <body>
-      <div id="userInfo" style="display:none;">
-          <p>Вы вошли как: <span id="userName"></span></p>
-          <input type="button" value="Выйти" id="logOut" />
-      </div>
-      <div id="loginForm">
-          <h3>Вход на сайт</h3>
-          <label>Введите email</label><br />
-          <input type="email" id="emailLogin" /> <br /><br />
-          <label>Введите пароль</label><br />
-          <input type="password" id="passwordLogin" /><br /><br />
-          <input type="submit" id="submitLogin" value="Логин" />
-      </div>
-      <div>
-          <input type="submit" id="getDataByLogin" value="Данные по логину" />
-      </div>
-      <div>
-          <input type="submit" id="getDataByRole" value="Данные по роли" />
-      </div>
+  
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;meta charset="utf-8" /&gt;
+      &lt;title&gt;JWT в ASP.NET Core Web API&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div id="userInfo" style="display:none;"&gt;
+          &lt;p&gt;Вы вошли как: &lt;span id="userName"&gt;&lt;/span&gt;&lt;/p&gt;
+          &lt;input type="button" value="Выйти" id="logOut" /&gt;
+      &lt;/div&gt;
+      &lt;div id="loginForm"&gt;
+          &lt;h3&gt;Вход на сайт&lt;/h3&gt;
+          &lt;label&gt;Введите email&lt;/label&gt;&lt;br /&gt;
+          &lt;input type="email" id="emailLogin" /&gt; &lt;br /&gt;&lt;br /&gt;
+          &lt;label&gt;Введите пароль&lt;/label&gt;&lt;br /&gt;
+          &lt;input type="password" id="passwordLogin" /&gt;&lt;br /&gt;&lt;br /&gt;
+          &lt;input type="submit" id="submitLogin" value="Логин" /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+          &lt;input type="submit" id="getDataByLogin" value="Данные по логину" /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+          &lt;input type="submit" id="getDataByRole" value="Данные по роли" /&gt;
+      &lt;/div&gt;
 
-      <script>
+      &lt;script&gt;
           var tokenKey = "accessToken";
 
           // отпавка запроса к контроллеру AccountController для получения токена
@@ -249,14 +249,14 @@
           };
 
           // получаем токен
-          document.getElementById("submitLogin").addEventListener("click", e => {
+          document.getElementById("submitLogin").addEventListener("click", e =&gt; {
 
               e.preventDefault();
               getTokenAsync();
           });
 
           // условный выход - просто удаляем токен и меняем видимость блоков
-          document.getElementById("logOut").addEventListener("click", e => {
+          document.getElementById("logOut").addEventListener("click", e =&gt; {
 
               e.preventDefault();
               document.getElementById("userName").innerText = "";
@@ -267,19 +267,18 @@
 
 
           // кнопка получения имя пользователя  - /api/values/getlogin
-          document.getElementById("getDataByLogin").addEventListener("click", e => {
+          document.getElementById("getDataByLogin").addEventListener("click", e =&gt; {
 
               e.preventDefault();
               getData("/api/values/getlogin");
           });
 
           // кнопка получения роли  - /api/values/getrole
-          document.getElementById("getDataByRole").addEventListener("click", e => {
+          document.getElementById("getDataByRole").addEventListener("click", e =&gt; {
 
               e.preventDefault();
               getData("/api/values/getrole");
           });
-      </script>
-  </body>
-  </html>
-      </svg>
+      &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
