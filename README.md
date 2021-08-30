@@ -164,7 +164,7 @@
     }
   
 8. И в конце добавим папку wwwroot, и новый файл index.html. (And at the end add wwwroot folder, and a new index.html file)
-  
+  <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
   <!DOCTYPE html>
   <html>
   <head>
@@ -282,3 +282,4 @@
       </script>
   </body>
   </html>
+      </svg>
