@@ -165,10 +165,10 @@
   
 8. И в конце добавим папку wwwroot, и новый файл index.html. (And at the end add wwwroot folder, and a new index.html file)
   
-  &lt;!DOCTYPE html&gt;
-  &lt;html&gt;
-  &lt;head&gt;
-      &lt;meta charset="utf-8" /&gt;
+  &lt;!DOCTYPE html&gt;\n
+  &lt;html&gt;\n
+  &lt;head&gt;\n
+      &lt;meta charset="utf-8" /&gt;\n
       &lt;title&gt;JWT в ASP.NET Core Web API&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
